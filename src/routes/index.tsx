@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { QrCode, Palette, LayoutGrid, Check, Utensils, Coffee, Pizza, ChefHat, ToggleRight, Globe } from "lucide-react";
 import { useState } from "react";
+import qdineLogo from "@/assets/qdine-logo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -17,21 +18,18 @@ export const Route = createFileRoute("/")({
 
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/60">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-primary/95 border-b border-primary-foreground/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 font-bold text-primary text-lg">
-          <div className="size-8 rounded-lg bg-primary grid place-items-center">
-            <Utensils className="size-4 text-primary-foreground" />
-          </div>
-          Qdine
+        <a href="#top" className="flex items-center">
+          <img src={qdineLogo} alt="Qdine" className="h-10 w-auto" />
         </a>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
-          <a href="#brand" className="hover:text-primary">Brand Preview</a>
-          <a href="#menu" className="hover:text-primary">Menu Control</a>
-          <a href="#qr" className="hover:text-primary">QR Access</a>
-          <a href="#pricing" className="hover:text-primary">Pricing</a>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-primary-foreground/85">
+          <a href="#brand" className="hover:text-primary-foreground">Brand Preview</a>
+          <a href="#menu" className="hover:text-primary-foreground">Menu Control</a>
+          <a href="#qr" className="hover:text-primary-foreground">QR Access</a>
+          <a href="#pricing" className="hover:text-primary-foreground">Pricing</a>
         </nav>
-        <Button asChild size="sm"><a href="#pricing">Get Started</a></Button>
+        <Button asChild size="sm" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"><a href="#pricing">Get Started</a></Button>
       </div>
     </header>
   );
@@ -304,12 +302,9 @@ function Footer() {
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2 font-bold">
-          <div className="size-8 rounded-lg bg-primary grid place-items-center">
-            <Utensils className="size-4 text-primary-foreground" />
-          </div>
-          Qdine
-        </div>
+        <a href="#top" className="flex items-center">
+          <img src={qdineLogo} alt="Qdine" className="h-10 w-auto" />
+        </a>
         <div className="text-sm text-background/70">
           Made with <span className="text-primary">♥</span> by <a href="https://devou.in" target="_blank" rel="noreferrer" className="text-background font-semibold hover:text-primary transition">devou.in</a>
         </div>
