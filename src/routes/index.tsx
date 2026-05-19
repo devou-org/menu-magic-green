@@ -260,8 +260,8 @@ function Pricing() {
   return (
     <section id="pricing" className="min-h-screen flex items-center py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="max-w-5xl mx-auto px-6 w-full text-center">
-        <div className="text-xs font-bold uppercase tracking-widest text-primary">Pricing</div>
-        <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight">One simple plan.<br/>Everything included.</h2>
+        <div className="text-xs font-bold uppercase tracking-widest text-primary comic-highlight">Pricing</div>
+        <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight comic-highlight">One simple plan.<br/>Everything included.</h2>
         <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">No per-item fees. No setup charges. Just a beautiful menu and total control.</p>
         <div className="mt-8 inline-flex items-center gap-1 rounded-full border border-border bg-card p-1">
           <button onClick={() => setYearly(false)} className={`px-4 py-2 rounded-full text-sm font-semibold transition ${!yearly ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}>Monthly</button>
