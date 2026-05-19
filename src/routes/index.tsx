@@ -148,8 +148,8 @@ function FeatureSection({
     <section id={id} className={`min-h-screen flex items-center py-24 ${bgClass}`}>
       <div className={`max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
         <div>
-          <div className={`text-xs font-bold uppercase tracking-widest ${eyebrowClass}`}>{eyebrow}</div>
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">{title}</h2>
+          <div className={`text-xs font-bold uppercase tracking-widest comic-highlight ${eyebrowClass}`}>{eyebrow}</div>
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight comic-highlight">{title}</h2>
           <p className={`mt-6 text-lg max-w-lg ${descClass}`}>{desc}</p>
         </div>
         <div>{children}</div>
