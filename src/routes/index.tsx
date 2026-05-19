@@ -107,7 +107,7 @@ function Hero() {
             <span className="size-1.5 rounded-full bg-primary animate-pulse" /> Live for 200+ restaurants
           </div>
           <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-foreground">
-            Your menu, <span className="text-primary">scanned not</span> printed.
+            Your menu, <span className="text-primary comic-highlight">scanned not</span> printed.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-lg">
             Replace dog-eared printed menus with a beautifully branded digital experience. One QR code on every table — update prices, mark items 86'd, and refresh your menu in seconds.
@@ -148,8 +148,8 @@ function FeatureSection({
     <section id={id} className={`min-h-screen flex items-center py-24 ${bgClass}`}>
       <div className={`max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
         <div>
-          <div className={`text-xs font-bold uppercase tracking-widest ${eyebrowClass}`}>{eyebrow}</div>
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">{title}</h2>
+          <div className={`text-xs font-bold uppercase tracking-widest comic-highlight ${eyebrowClass}`}>{eyebrow}</div>
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight comic-highlight">{title}</h2>
           <p className={`mt-6 text-lg max-w-lg ${descClass}`}>{desc}</p>
         </div>
         <div>{children}</div>
@@ -260,8 +260,8 @@ function Pricing() {
   return (
     <section id="pricing" className="min-h-screen flex items-center py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="max-w-5xl mx-auto px-6 w-full text-center">
-        <div className="text-xs font-bold uppercase tracking-widest text-primary">Pricing</div>
-        <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight">One simple plan.<br/>Everything included.</h2>
+        <div className="text-xs font-bold uppercase tracking-widest text-primary comic-highlight">Pricing</div>
+        <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight comic-highlight">One simple plan.<br/>Everything included.</h2>
         <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">No per-item fees. No setup charges. Just a beautiful menu and total control.</p>
         <div className="mt-8 inline-flex items-center gap-1 rounded-full border border-border bg-card p-1">
           <button onClick={() => setYearly(false)} className={`px-4 py-2 rounded-full text-sm font-semibold transition ${!yearly ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}>Monthly</button>

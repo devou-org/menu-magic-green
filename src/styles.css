@@ -145,3 +145,7 @@
     color: var(--color-foreground);
   }
 }
+
+.comic-highlight {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", cursive, sans-serif;
+}
