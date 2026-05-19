@@ -6,9 +6,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MenuLeaf — Digital Menu Service for Restaurants" },
+      { title: "Qdine — Digital Menu Service for Restaurants" },
       { name: "description", content: "Beautiful QR-code digital menus for restaurants. Custom branded, category-wise menus with live availability toggles. ₹199/month." },
-      { property: "og:title", content: "MenuLeaf — Digital Menus for Restaurants" },
+      { property: "og:title", content: "Qdine — Digital Menus for Restaurants" },
       { property: "og:description", content: "Branded QR menus with real-time availability. ₹199/month or ₹1300/year." },
     ],
   }),
@@ -23,7 +23,7 @@ function Nav() {
           <div className="size-8 rounded-lg bg-primary grid place-items-center">
             <Utensils className="size-4 text-primary-foreground" />
           </div>
-          MenuLeaf
+          Qdine
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
           <a href="#brand" className="hover:text-primary">Brand Preview</a>
@@ -58,7 +58,7 @@ function PhoneMockup() {
       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-foreground rounded-b-2xl z-10" />
       <div className="w-full h-full rounded-[34px] bg-background overflow-hidden flex flex-col">
         <div className="bg-primary text-primary-foreground p-4 pt-8">
-          <div className="text-xs opacity-70">menuleaf.in/chicpicado</div>
+          <div className="text-xs opacity-70">qdine.in/chicpicado</div>
           <div className="mt-2 flex items-center gap-2">
             <div className="size-9 rounded-lg bg-primary-foreground/15 grid place-items-center">
               <ChefHat className="size-5" />
@@ -166,7 +166,7 @@ function BrandPreviewVisual() {
       <div className="rounded-3xl border border-border bg-card p-6 shadow-2xl shadow-primary/10">
         <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
           <Globe className="size-3.5" />
-          <span className="font-mono">menuleaf.in/<span className="text-primary font-semibold">yourbrand</span></span>
+          <span className="font-mono">qdine.in/<span className="text-primary font-semibold">yourbrand</span></span>
         </div>
         <div className="rounded-2xl border border-border overflow-hidden">
           <div className="bg-accent/50 p-4 flex items-center gap-3">
@@ -192,7 +192,7 @@ function BrandPreviewVisual() {
       </div>
       <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-xl">
         <div className="text-xs opacity-70">Your subdomain</div>
-        <div className="font-bold font-mono">yourbrand.menuleaf.in</div>
+        <div className="font-bold font-mono">yourbrand.qdine.in</div>
       </div>
     </div>
   );
@@ -247,7 +247,7 @@ function QRVisual() {
               })}
             </div>
           </div>
-          <div className="mt-4 font-mono text-xs text-muted-foreground">menuleaf.in/chicpicado</div>
+          <div className="mt-4 font-mono text-xs text-muted-foreground">qdine.in/chicpicado</div>
         </div>
         <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground rounded-full size-16 grid place-items-center shadow-xl">
           <QrCode className="size-8" />
@@ -270,7 +270,7 @@ function Pricing() {
           <button onClick={() => setYearly(true)} className={`px-4 py-2 rounded-full text-sm font-semibold transition ${yearly ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}>Yearly <span className="ml-1 text-[10px] opacity-80">save 45%</span></button>
         </div>
         <div className="mt-10 max-w-md mx-auto rounded-3xl bg-card border-2 border-primary p-8 shadow-2xl shadow-primary/20 text-left">
-          <div className="text-sm font-semibold text-primary">MenuLeaf Pro</div>
+          <div className="text-sm font-semibold text-primary">Qdine Pro</div>
           <div className="mt-4 flex items-baseline gap-2">
             <span className="text-6xl font-bold text-foreground">₹{yearly ? "1300" : "199"}</span>
             <span className="text-muted-foreground">/{yearly ? "year" : "month"}</span>
@@ -279,7 +279,7 @@ function Pricing() {
           <ul className="mt-6 space-y-3 text-sm">
             {[
               "Custom-branded digital menu",
-              "Your own subdomain (brand.menuleaf.in)",
+              "Your own subdomain (brand.qdine.in)",
               "Unlimited categories & menu items",
               "Toggle item availability in real-time",
               "QR codes for every table",
@@ -308,12 +308,12 @@ function Footer() {
           <div className="size-8 rounded-lg bg-primary grid place-items-center">
             <Utensils className="size-4 text-primary-foreground" />
           </div>
-          MenuLeaf
+          Qdine
         </div>
         <div className="text-sm text-background/70">
           Made with <span className="text-primary">♥</span> by <a href="https://devou.in" target="_blank" rel="noreferrer" className="text-background font-semibold hover:text-primary transition">devou.in</a>
         </div>
-        <div className="text-xs text-background/50">© {new Date().getFullYear()} MenuLeaf. All rights reserved.</div>
+        <div className="text-xs text-background/50">© {new Date().getFullYear()} Qdine. All rights reserved.</div>
       </div>
     </footer>
   );
@@ -329,7 +329,7 @@ function Index() {
         bg="white"
         eyebrow="01 — Brand Preview"
         title="Your brand, pixel-perfect on every screen."
-        desc="Send us your logo and brand image — we'll craft a digital menu that matches your identity, complete with your own subdomain like yourbrand.menuleaf.in. Customers see your brand, not ours."
+        desc="Send us your logo and brand image — we'll craft a digital menu that matches your identity, complete with your own subdomain like yourbrand.qdine.in. Customers see your brand, not ours."
       >
         <BrandPreviewVisual />
       </FeatureSection>
