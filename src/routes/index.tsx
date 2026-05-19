@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-primary/95 border-b border-primary-foreground/10">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-primary border-b border-primary-foreground/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center">
           <img src={qdineLogo} alt="Qdine" className="h-10 w-auto" />
