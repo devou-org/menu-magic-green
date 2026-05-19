@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { QrCode, Palette, LayoutGrid, Check, Utensils, Coffee, Pizza, ChefHat, ToggleRight, Globe } from "lucide-react";
 import { useState } from "react";
-import qdineLogo from "@/assets/qdine-logo.jpg";
+import qdineLogo from "@/assets/qdine-logo-trimmed.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
