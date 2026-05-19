@@ -107,7 +107,7 @@ function Hero() {
             <span className="size-1.5 rounded-full bg-primary animate-pulse" /> Live for 200+ restaurants
           </div>
           <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-foreground">
-            Your menu, <span className="text-primary">scanned not</span> printed.
+            Your menu, <span className="text-primary comic-highlight">scanned not</span> printed.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-lg">
             Replace dog-eared printed menus with a beautifully branded digital experience. One QR code on every table — update prices, mark items 86'd, and refresh your menu in seconds.
