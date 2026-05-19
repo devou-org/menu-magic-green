@@ -2,13 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { QrCode, Palette, LayoutGrid, Check, Utensils, Coffee, Pizza, ChefHat, ToggleRight, Globe } from "lucide-react";
 import { useState } from "react";
+import qdineLogo from "@/assets/qdine-logo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MenuLeaf — Digital Menu Service for Restaurants" },
+      { title: "Qdine — Digital Menu Service for Restaurants" },
       { name: "description", content: "Beautiful QR-code digital menus for restaurants. Custom branded, category-wise menus with live availability toggles. ₹199/month." },
-      { property: "og:title", content: "MenuLeaf — Digital Menus for Restaurants" },
+      { property: "og:title", content: "Qdine — Digital Menus for Restaurants" },
       { property: "og:description", content: "Branded QR menus with real-time availability. ₹199/month or ₹1300/year." },
     ],
   }),
@@ -17,21 +18,18 @@ export const Route = createFileRoute("/")({
 
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/60">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-primary/95 border-b border-primary-foreground/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 font-bold text-primary text-lg">
-          <div className="size-8 rounded-lg bg-primary grid place-items-center">
-            <Utensils className="size-4 text-primary-foreground" />
-          </div>
-          MenuLeaf
+        <a href="#top" className="flex items-center">
+          <img src={qdineLogo} alt="Qdine" className="h-10 w-auto" />
         </a>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
-          <a href="#brand" className="hover:text-primary">Brand Preview</a>
-          <a href="#menu" className="hover:text-primary">Menu Control</a>
-          <a href="#qr" className="hover:text-primary">QR Access</a>
-          <a href="#pricing" className="hover:text-primary">Pricing</a>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-primary-foreground/85">
+          <a href="#brand" className="hover:text-primary-foreground">Brand Preview</a>
+          <a href="#menu" className="hover:text-primary-foreground">Menu Control</a>
+          <a href="#qr" className="hover:text-primary-foreground">QR Access</a>
+          <a href="#pricing" className="hover:text-primary-foreground">Pricing</a>
         </nav>
-        <Button asChild size="sm"><a href="#pricing">Get Started</a></Button>
+        <Button asChild size="sm" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"><a href="#pricing">Get Started</a></Button>
       </div>
     </header>
   );
@@ -58,7 +56,7 @@ function PhoneMockup() {
       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-foreground rounded-b-2xl z-10" />
       <div className="w-full h-full rounded-[34px] bg-background overflow-hidden flex flex-col">
         <div className="bg-primary text-primary-foreground p-4 pt-8">
-          <div className="text-xs opacity-70">menuleaf.in/chicpicado</div>
+          <div className="text-xs opacity-70">qdine.in/chicpicado</div>
           <div className="mt-2 flex items-center gap-2">
             <div className="size-9 rounded-lg bg-primary-foreground/15 grid place-items-center">
               <ChefHat className="size-5" />
@@ -166,7 +164,7 @@ function BrandPreviewVisual() {
       <div className="rounded-3xl border border-border bg-card p-6 shadow-2xl shadow-primary/10">
         <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
           <Globe className="size-3.5" />
-          <span className="font-mono">menuleaf.in/<span className="text-primary font-semibold">yourbrand</span></span>
+          <span className="font-mono">qdine.in/<span className="text-primary font-semibold">yourbrand</span></span>
         </div>
         <div className="rounded-2xl border border-border overflow-hidden">
           <div className="bg-accent/50 p-4 flex items-center gap-3">
@@ -192,7 +190,7 @@ function BrandPreviewVisual() {
       </div>
       <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-xl">
         <div className="text-xs opacity-70">Your subdomain</div>
-        <div className="font-bold font-mono">yourbrand.menuleaf.in</div>
+        <div className="font-bold font-mono">yourbrand.qdine.in</div>
       </div>
     </div>
   );
@@ -247,7 +245,7 @@ function QRVisual() {
               })}
             </div>
           </div>
-          <div className="mt-4 font-mono text-xs text-muted-foreground">menuleaf.in/chicpicado</div>
+          <div className="mt-4 font-mono text-xs text-muted-foreground">qdine.in/chicpicado</div>
         </div>
         <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground rounded-full size-16 grid place-items-center shadow-xl">
           <QrCode className="size-8" />
@@ -270,7 +268,7 @@ function Pricing() {
           <button onClick={() => setYearly(true)} className={`px-4 py-2 rounded-full text-sm font-semibold transition ${yearly ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}>Yearly <span className="ml-1 text-[10px] opacity-80">save 45%</span></button>
         </div>
         <div className="mt-10 max-w-md mx-auto rounded-3xl bg-card border-2 border-primary p-8 shadow-2xl shadow-primary/20 text-left">
-          <div className="text-sm font-semibold text-primary">MenuLeaf Pro</div>
+          <div className="text-sm font-semibold text-primary">Qdine Pro</div>
           <div className="mt-4 flex items-baseline gap-2">
             <span className="text-6xl font-bold text-foreground">₹{yearly ? "1300" : "199"}</span>
             <span className="text-muted-foreground">/{yearly ? "year" : "month"}</span>
@@ -279,7 +277,7 @@ function Pricing() {
           <ul className="mt-6 space-y-3 text-sm">
             {[
               "Custom-branded digital menu",
-              "Your own subdomain (brand.menuleaf.in)",
+              "Your own subdomain (brand.qdine.in)",
               "Unlimited categories & menu items",
               "Toggle item availability in real-time",
               "QR codes for every table",
@@ -304,16 +302,13 @@ function Footer() {
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2 font-bold">
-          <div className="size-8 rounded-lg bg-primary grid place-items-center">
-            <Utensils className="size-4 text-primary-foreground" />
-          </div>
-          MenuLeaf
-        </div>
+        <a href="#top" className="flex items-center">
+          <img src={qdineLogo} alt="Qdine" className="h-10 w-auto" />
+        </a>
         <div className="text-sm text-background/70">
           Made with <span className="text-primary">♥</span> by <a href="https://devou.in" target="_blank" rel="noreferrer" className="text-background font-semibold hover:text-primary transition">devou.in</a>
         </div>
-        <div className="text-xs text-background/50">© {new Date().getFullYear()} MenuLeaf. All rights reserved.</div>
+        <div className="text-xs text-background/50">© {new Date().getFullYear()} Qdine. All rights reserved.</div>
       </div>
     </footer>
   );
@@ -329,7 +324,7 @@ function Index() {
         bg="white"
         eyebrow="01 — Brand Preview"
         title="Your brand, pixel-perfect on every screen."
-        desc="Send us your logo and brand image — we'll craft a digital menu that matches your identity, complete with your own subdomain like yourbrand.menuleaf.in. Customers see your brand, not ours."
+        desc="Send us your logo and brand image — we'll craft a digital menu that matches your identity, complete with your own subdomain like yourbrand.qdine.in. Customers see your brand, not ours."
       >
         <BrandPreviewVisual />
       </FeatureSection>
