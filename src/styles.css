@@ -149,3 +149,12 @@
 .comic-highlight {
   font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", cursive, sans-serif;
 }
+
+/* Hide the Lovable badge on the right */
+#lovable-bento,
+#lovable-badge,
+#lovable-tagger-root,
+.lovable-badge,
+[data-lovable-badge] {
+  display: none !important;
+}

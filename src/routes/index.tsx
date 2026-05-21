@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { QrCode, Palette, LayoutGrid, Check, Utensils, Coffee, Pizza, ChefHat, ToggleRight, Globe } from "lucide-react";
 import { useState } from "react";
-import qdineLogo from "@/assets/qdine-logo-trimmed.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/")({
 function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-primary border-b border-primary-foreground/10">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center">
-          <img src={qdineLogo} alt="Qdine Logo" className="h-10 w-auto" />
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="#top" className="flex items-center -ml-4 lg:-ml-8">
+          <img src="/qdine-logo-removebg-preview.png" alt="Qdine Logo" className="h-20 w-auto object-contain scale-[2] lg:scale-[2.25] origin-left" />
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-primary-foreground/85">
           <a href="#brand" className="hover:text-primary-foreground">Brand Preview</a>
@@ -98,19 +98,19 @@ function PhoneMockup() {
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-screen pt-24 pb-16 overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background">
+    <section id="top" className="relative min-h-screen pt-28 pb-16 overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background">
       <div className="absolute -top-40 -right-40 size-[500px] rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute -bottom-40 -left-40 size-[500px] rounded-full bg-primary/5 blur-3xl" />
       <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary">
-            <span className="size-1.5 rounded-full bg-primary animate-pulse" /> Live for 200+ restaurants
+            <span className="size-1.5 rounded-full bg-primary animate-pulse" /> The Future of Dining
           </div>
           <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-foreground">
-            Your menu, <span className="text-primary comic-highlight">scanned not</span> printed.
+            Transform your <span className="text-primary comic-highlight">guest experience.</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-lg">
-            Replace dog-eared printed menus with a beautifully branded digital experience. One QR code on every table — update prices, mark items 86'd, and refresh your menu in seconds.
+            Elevate your restaurant with a seamless, contactless digital menu. Effortless to update, beautiful to look at, and perfectly tailored to your brand.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg" asChild><a href="#pricing">Start free trial</a></Button>
@@ -304,8 +304,8 @@ function Footer() {
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="#top" className="flex items-center">
-          <img src={qdineLogo} alt="Qdine Logo" className="h-10 w-auto" />
+        <a href="#top" className="flex items-center -ml-4 lg:-ml-8">
+          <img src="/qdine-logo-removebg-preview.png" alt="Qdine Logo" className="h-20 w-auto object-contain scale-[2] lg:scale-[2.25] origin-center md:origin-left" />
         </a>
         <div className="text-sm text-background/70">
           Made with <span className="text-primary">♥</span> by <a href="https://devou.in" target="_blank" rel="noreferrer" className="text-background font-semibold hover:text-primary transition">devou.in</a>
