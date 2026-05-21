@@ -320,6 +320,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
+      <main>
       <Hero />
       <FeatureSection
         id="brand"
@@ -349,6 +350,7 @@ function Index() {
         <QRVisual />
       </FeatureSection>
       <Pricing />
+      </main>
       <Footer />
     </div>
   );
