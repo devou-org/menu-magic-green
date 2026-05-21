@@ -91,6 +91,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              name: "Qdine",
+              url: "https://menu-magic-green.lovable.app",
+              logo: "https://menu-magic-green.lovable.app/favicon.ico",
+              description: "Digital menu service for restaurants — branded QR-code menus with real-time availability.",
+            },
+            {
+              "@type": "WebSite",
+              name: "Qdine",
+              url: "https://menu-magic-green.lovable.app",
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
