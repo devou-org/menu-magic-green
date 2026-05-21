@@ -273,9 +273,9 @@ function Pricing() {
           <button onClick={() => setYearly(true)} className={`px-4 py-2 rounded-full text-sm font-semibold transition ${yearly ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}>Yearly <span className="ml-1 text-[10px] opacity-80">save 45%</span></button>
         </div>
         <div className="mt-10 max-w-md mx-auto rounded-3xl bg-card border-2 border-primary p-8 shadow-2xl shadow-primary/20 text-left">
-          <div className="text-sm font-semibold text-primary">Qdine Pro</div>
+          <div className="text-sm font-semibold text-primary">Pro Plan</div>
           <div className="mt-4 flex items-baseline gap-2">
-            <span className="text-6xl font-bold text-foreground">₹{yearly ? "1300" : "199"}</span>
+            <span className="text-6xl font-bold text-foreground">₹{yearly ? "1296" : "199"}</span>
             <span className="text-muted-foreground">/{yearly ? "year" : "month"}</span>
           </div>
           {yearly && <div className="mt-1 text-sm text-primary font-semibold">Just ₹108/month — billed yearly</div>}
@@ -288,7 +288,7 @@ function Pricing() {
               "QR codes for every table",
               "Photo, price & description updates anytime",
               "Mobile-optimized customer view",
-              "Priority email support",
+              "Priority WhatsApp support",
             ].map(f => (
               <li key={f} className="flex gap-2 items-start">
                 <Check className="size-5 text-primary shrink-0 mt-0.5" /> <span className="text-foreground">{f}</span>
