@@ -107,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               name: "Qdine",
               url: "https://menu-magic-green.lovable.app",
               logo: "https://menu-magic-green.lovable.app/qdine-logo (1).jpg",
-              description: "Digital menu service for restaurants — branded QR-code menus with real-time availability.",
+              description: "Digital menu service for restaurants — branded QR-code menus with instant availability updates.",
             },
             {
               "@type": "WebSite",

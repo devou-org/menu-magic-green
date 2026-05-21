@@ -55,7 +55,7 @@ function PhoneMockup() {
       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-foreground rounded-b-2xl z-10" />
       <div className="w-full h-full rounded-[34px] bg-background overflow-hidden flex flex-col">
         <div className="bg-primary text-primary-foreground p-4 pt-8">
-          <div className="text-xs opacity-70">qdine.in/your-restaurant</div>
+          <div className="text-xs opacity-70">your-restaurant.qdine.in</div>
           <div className="mt-2 flex items-center gap-2">
             <div className="size-9 rounded-lg bg-primary-foreground/15 grid place-items-center">
               <ChefHat className="size-5" />
@@ -167,7 +167,7 @@ function BrandPreviewVisual() {
       <div className="rounded-3xl border border-border bg-card p-6 shadow-2xl shadow-primary/10">
         <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
           <Globe className="size-3.5" />
-          <span className="font-mono">qdine.in/<span className="text-primary font-semibold">yourbrand</span></span>
+          <span className="font-mono"><span className="text-primary font-semibold">yourbrand</span>.qdine.in</span>
         </div>
         <div className="rounded-2xl border border-border overflow-hidden">
           <div className="bg-accent/50 p-4 flex items-center gap-3">
@@ -191,10 +191,10 @@ function BrandPreviewVisual() {
           </div>
         </div>
       </div>
-      {/* <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-xl">
+      <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-xl">
         <div className="text-xs opacity-70">Your subdomain</div>
         <div className="font-bold font-mono">yourbrand.qdine.in</div>
-      </div> */}
+      </div>
     </div>
   );
 }
@@ -250,7 +250,7 @@ function QRVisual() {
               })}
             </div>
           </div>
-          <div className="mt-4 font-mono text-xs text-muted-foreground">qdine.in/your-restaurant</div>
+          <div className="mt-4 font-mono text-xs text-muted-foreground">your-restaurant.qdine.in</div>
         </div>
         <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground rounded-full size-16 grid place-items-center shadow-xl">
           <QrCode className="size-8" />
@@ -282,9 +282,9 @@ function Pricing() {
           <ul className="mt-6 space-y-3 text-sm">
             {[
               "Custom-branded digital menu",
-              // "Your own subdomain (brand.qdine.in)",
+              "Your own subdomain (brand.qdine.in)",
               "Unlimited categories & menu items",
-              "Toggle item availability in real-time",
+              "Toggle item availability",
               "QR codes for every table",
               "Photo, price & description updates anytime",
               "Mobile-optimized customer view",
@@ -335,7 +335,7 @@ function Index() {
         bg="white"
         eyebrow="01 — Brand Preview"
         title="Your brand, pixel-perfect on every screen."
-        desc="Send us your logo and brand image — we'll craft a digital menu that matches your identity. Customers see your brand, not ours." /* complete with your own subdomain like yourbrand.qdine.in. */
+        desc="Send us your logo and brand image — we'll craft a digital menu that matches your identity, complete with your own subdomain like yourbrand.qdine.in. Customers see your brand, not ours."
       >
         <BrandPreviewVisual />
       </FeatureSection>
@@ -344,7 +344,7 @@ function Index() {
         bg="green"
         eyebrow="02 — Live Menu Control"
         title="Sold out? Flip a switch."
-        desc="Organize your menu by category — starters, mains, drinks, desserts. Toggle any item's availability in real-time from your phone. No more awkward 'sorry, we're out of that' moments."
+        desc="Organize your menu by category — starters, mains, drinks, desserts. Toggle any item's availability from your phone. No more awkward 'sorry, we're out of that' moments."
       >
         <CategoryVisual />
       </FeatureSection>
