@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { QrCode, Palette, LayoutGrid, Check, Utensils, Coffee, Pizza, ChefHat, ToggleRight, Globe } from "lucide-react";
+import { QrCode, Palette, LayoutGrid, Check, Utensils, Coffee, Pizza, ChefHat, ToggleRight, Globe, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 
@@ -19,17 +19,16 @@ export const Route = createFileRoute("/")({
 function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-primary border-b border-primary-foreground/10">
-      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <div className="relative max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         <a href="#top" className="flex items-center -ml-4 lg:-ml-8">
           <img src="/qdine-logo-removebg-preview.png" alt="Qdine Logo" className="h-24 w-auto object-contain scale-[2.5] lg:scale-[3] origin-left" />
         </a>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-primary-foreground/85">
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 text-sm font-medium text-primary-foreground/85">
           <a href="#brand" className="hover:text-primary-foreground">Brand Preview</a>
           <a href="#menu" className="hover:text-primary-foreground">Menu Control</a>
           <a href="#qr" className="hover:text-primary-foreground">QR Access</a>
           <a href="#pricing" className="hover:text-primary-foreground">Pricing</a>
         </nav>
-        <Button asChild size="sm" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"><a href="#pricing">Get Started</a></Button>
       </div>
     </header>
   );
@@ -113,8 +112,12 @@ function Hero() {
             Elevate your restaurant with a seamless, contactless digital menu. Effortless to update, beautiful to look at, and perfectly tailored to your brand.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button size="lg" asChild><a href="#pricing">Start free trial</a></Button>
-            <Button size="lg" variant="outline" asChild><a href="#brand">See it in action</a></Button>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg shadow-primary/20 transition-all hover:scale-105" asChild>
+              <a href="https://wa.me/919061555512?text=Hi%2C%20I'm%20interested%20in%20setting%20up%20a%20digital%20menu%20for%20my%20restaurant." target="_blank" rel="noreferrer">
+                <MessageCircle className="mr-2 size-5" />
+                Get Your Digital Menu Now
+              </a>
+            </Button>
           </div>
           <div className="mt-10 flex items-center gap-8 text-sm text-muted-foreground">
             <div><div className="text-2xl font-bold text-foreground">2 min</div>setup time</div>
@@ -292,8 +295,13 @@ function Pricing() {
               </li>
             ))}
           </ul>
-          <Button size="lg" className="w-full mt-8">Start 14-day free trial</Button>
-          <div className="text-center mt-3 text-xs text-muted-foreground">No credit card required</div>
+          <Button size="lg" className="w-full mt-8 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg shadow-primary/20 transition-all" asChild>
+            <a href="https://wa.me/919061555512?text=Hi%2C%20I'm%20interested%20in%20setting%20up%20a%20digital%20menu%20for%20my%20restaurant." target="_blank" rel="noreferrer">
+              <MessageCircle className="mr-2 size-5" />
+              Get Started via WhatsApp
+            </a>
+          </Button>
+          <div className="text-center mt-3 text-xs text-muted-foreground">Setup takes less than 2 minutes</div>
         </div>
       </div>
     </section>
