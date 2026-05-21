@@ -19,9 +19,9 @@ export const Route = createFileRoute("/")({
 function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-primary border-b border-primary-foreground/10">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         <a href="#top" className="flex items-center -ml-4 lg:-ml-8">
-          <img src="/qdine-logo-removebg-preview.png" alt="Qdine Logo" className="h-20 w-auto object-contain scale-[2] lg:scale-[2.25] origin-left" />
+          <img src="/qdine-logo-removebg-preview.png" alt="Qdine Logo" className="h-24 w-auto object-contain scale-[2.5] lg:scale-[3] origin-left" />
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-primary-foreground/85">
           <a href="#brand" className="hover:text-primary-foreground">Brand Preview</a>
@@ -56,13 +56,13 @@ function PhoneMockup() {
       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-foreground rounded-b-2xl z-10" />
       <div className="w-full h-full rounded-[34px] bg-background overflow-hidden flex flex-col">
         <div className="bg-primary text-primary-foreground p-4 pt-8">
-          <div className="text-xs opacity-70">qdine.in/chicpicado</div>
+          <div className="text-xs opacity-70">qdine.in/your-restaurant</div>
           <div className="mt-2 flex items-center gap-2">
             <div className="size-9 rounded-lg bg-primary-foreground/15 grid place-items-center">
               <ChefHat className="size-5" />
             </div>
             <div>
-              <div className="font-bold">chicpicado</div>
+              <div className="font-bold">Your Restaurant</div>
               <div className="text-[10px] opacity-70">Italian · Open now</div>
             </div>
           </div>
@@ -169,7 +169,7 @@ function BrandPreviewVisual() {
         <div className="rounded-2xl border border-border overflow-hidden">
           <div className="bg-accent/50 p-4 flex items-center gap-3">
             <div className="size-10 rounded-lg bg-primary grid place-items-center"><ChefHat className="size-5 text-primary-foreground" /></div>
-            <div className="font-bold text-foreground">chicpicado</div>
+            <div className="font-bold text-foreground">Your Restaurant</div>
           </div>
           <div className="p-4 space-y-3">
             <div className="h-2 w-32 rounded bg-primary" />
@@ -188,10 +188,10 @@ function BrandPreviewVisual() {
           </div>
         </div>
       </div>
-      <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-xl">
+      {/* <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-xl">
         <div className="text-xs opacity-70">Your subdomain</div>
         <div className="font-bold font-mono">yourbrand.qdine.in</div>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -247,7 +247,7 @@ function QRVisual() {
               })}
             </div>
           </div>
-          <div className="mt-4 font-mono text-xs text-muted-foreground">qdine.in/chicpicado</div>
+          <div className="mt-4 font-mono text-xs text-muted-foreground">qdine.in/your-restaurant</div>
         </div>
         <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground rounded-full size-16 grid place-items-center shadow-xl">
           <QrCode className="size-8" />
@@ -279,7 +279,7 @@ function Pricing() {
           <ul className="mt-6 space-y-3 text-sm">
             {[
               "Custom-branded digital menu",
-              "Your own subdomain (brand.qdine.in)",
+              // "Your own subdomain (brand.qdine.in)",
               "Unlimited categories & menu items",
               "Toggle item availability in real-time",
               "QR codes for every table",
@@ -327,7 +327,7 @@ function Index() {
         bg="white"
         eyebrow="01 — Brand Preview"
         title="Your brand, pixel-perfect on every screen."
-        desc="Send us your logo and brand image — we'll craft a digital menu that matches your identity, complete with your own subdomain like yourbrand.qdine.in. Customers see your brand, not ours."
+        desc="Send us your logo and brand image — we'll craft a digital menu that matches your identity. Customers see your brand, not ours." /* complete with your own subdomain like yourbrand.qdine.in. */
       >
         <BrandPreviewVisual />
       </FeatureSection>
