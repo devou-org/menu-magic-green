@@ -288,7 +288,6 @@ function Pricing() {
               "QR codes for every table",
               "Photo, price & description updates anytime",
               "Mobile-optimized customer view",
-              "Priority WhatsApp support",
             ].map(f => (
               <li key={f} className="flex gap-2 items-start">
                 <Check className="size-5 text-primary shrink-0 mt-0.5" /> <span className="text-foreground">{f}</span>
