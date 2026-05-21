@@ -1,0 +1,11 @@
+# Qdine
+
+> Qdine is a digital menu service for restaurants. Custom-branded QR-code menus with category organization, real-time availability toggles, and your own subdomain. ₹199/month or ₹1300/year.
+
+## Pages
+
+- [Home](/): Overview of Qdine's digital menu service for restaurants.
+- [Brand Preview](/#brand): Custom-branded digital menus with your own subdomain (yourbrand.qdine.in).
+- [Menu Control](/#menu): Category-wise menus with real-time availability toggles.
+- [QR Access](/#qr): Printable QR codes for every table — no app, no download.
+- [Pricing](/#pricing): ₹199/month or ₹1300/year. 14-day free trial.
