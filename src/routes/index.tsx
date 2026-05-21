@@ -212,7 +212,7 @@ function CategoryVisual() {
           <div key={name} className="flex items-center justify-between p-4 rounded-xl bg-primary-foreground/10 border border-primary-foreground/15">
             <div>
               <div className="font-semibold text-primary-foreground">{name}</div>
-              <div className={`text-xs ${on ? "text-primary-foreground/60" : "text-primary-foreground/40 line-through"}`}>
+              <div className={`text-xs ${on ? "text-primary-foreground/80" : "text-primary-foreground/70 line-through"}`}>
                 {on ? "Available now" : "Sold out today"}
               </div>
             </div>
@@ -320,6 +320,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
+      <main>
       <Hero />
       <FeatureSection
         id="brand"
@@ -349,6 +350,7 @@ function Index() {
         <QRVisual />
       </FeatureSection>
       <Pricing />
+      </main>
       <Footer />
     </div>
   );
