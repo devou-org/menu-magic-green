@@ -21,7 +21,7 @@ function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-primary border-b border-primary-foreground/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center">
-          <img src={qdineLogo} alt="Qdine" className="h-10 w-auto" />
+          <img src={qdineLogo} alt="Qdine Logo" className="h-10 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-primary-foreground/85">
           <a href="#brand" className="hover:text-primary-foreground">Brand Preview</a>
@@ -218,6 +218,8 @@ function CategoryVisual() {
             </div>
             <button
               onClick={() => setAvailable(p => ({ ...p, [name]: !p[name] }))}
+              aria-label={`Toggle availability for ${name} (currently ${on ? "available" : "sold out"})`}
+              aria-pressed={on}
               className={`relative w-12 h-7 rounded-full transition ${on ? "bg-primary-foreground" : "bg-primary-foreground/20"}`}
             >
               <span className={`absolute top-0.5 size-6 rounded-full bg-primary transition ${on ? "left-[22px]" : "left-0.5"}`} />
@@ -303,7 +305,7 @@ function Footer() {
     <footer className="bg-foreground text-background py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <a href="#top" className="flex items-center">
-          <img src={qdineLogo} alt="Qdine" className="h-10 w-auto" />
+          <img src={qdineLogo} alt="Qdine Logo" className="h-10 w-auto" />
         </a>
         <div className="text-sm text-background/70">
           Made with <span className="text-primary">♥</span> by <a href="https://devou.in" target="_blank" rel="noreferrer" className="text-background font-semibold hover:text-primary transition">devou.in</a>
