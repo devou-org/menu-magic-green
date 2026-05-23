@@ -233,8 +233,13 @@ function QueuePage() {
                 <div className="flex items-center gap-2"><Check className="size-4" /> Works on any phone</div>
               </div>
             </div>
-            <div className="flex justify-center">
-              <TicketMockup />
+            <div className="relative flex justify-center items-center">
+              <div className="absolute inset-0 flex items-center justify-center opacity-90">
+                <QueueIllustration />
+              </div>
+              <div className="relative z-10">
+                <TicketMockup />
+              </div>
             </div>
           </div>
         </section>
