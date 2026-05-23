@@ -69,6 +69,64 @@ function TicketMockup() {
   );
 }
 
+function QueueIllustration() {
+  const people = [
+    { color: "bg-accent", label: "A-17", delay: "0s" },
+    { color: "bg-primary/80", label: "A-16", delay: "0.15s" },
+    { color: "bg-accent/80", label: "A-15", delay: "0.3s" },
+    { color: "bg-primary/60", label: "A-14", delay: "0.45s" },
+  ];
+  return (
+    <div className="relative w-full max-w-md mx-auto" aria-hidden="true">
+      {/* Soft glow */}
+      <div className="absolute -inset-10 bg-primary-foreground/5 blur-3xl rounded-full" />
+
+      {/* Door / entrance */}
+      <div className="relative mx-auto w-56 h-32 rounded-t-[7rem] bg-primary-foreground/10 border border-primary-foreground/20 border-b-0 backdrop-blur-sm flex items-end justify-center pb-3">
+        <div className="text-[10px] uppercase tracking-[0.2em] text-primary-foreground/70">Entrance</div>
+      </div>
+
+      {/* Floor line */}
+      <div className="h-px bg-gradient-to-r from-transparent via-primary-foreground/40 to-transparent" />
+
+      {/* Queue of people with floating tickets */}
+      <div className="relative mt-8 flex items-end justify-center gap-5">
+        {people.map((p, i) => (
+          <div key={p.label} className="flex flex-col items-center" style={{ animation: `qfloat 3s ease-in-out ${p.delay} infinite` }}>
+            {/* Floating ticket */}
+            <div className="mb-3 px-2 py-1 rounded-md bg-primary-foreground text-primary text-[10px] font-mono shadow-lg shadow-black/20">
+              {p.label}
+            </div>
+            {/* Connector */}
+            <div className="w-px h-3 bg-primary-foreground/30" />
+            {/* Person: head + body */}
+            <div className={`size-7 rounded-full ${p.color} ring-2 ring-primary-foreground/20`} />
+            <div className={`mt-1 w-10 h-12 rounded-t-2xl ${p.color} opacity-90`} />
+          </div>
+        ))}
+      </div>
+
+      {/* QR call-out */}
+      <div className="absolute -right-2 top-6 rotate-6 rounded-xl bg-primary-foreground text-primary p-3 shadow-xl shadow-black/30">
+        <div className="size-14 grid grid-cols-4 grid-rows-4 gap-0.5">
+          {Array.from({ length: 16 }).map((_, i) => (
+            <div key={i} className={`rounded-[2px] ${[0,2,3,5,6,9,10,11,13,15].includes(i) ? "bg-primary" : "bg-transparent"}`} />
+          ))}
+        </div>
+        <div className="mt-1 text-[9px] text-center uppercase tracking-wider font-semibold">Scan</div>
+      </div>
+
+      {/* Live status pill */}
+      <div className="absolute -left-2 top-10 -rotate-3 inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur px-3 py-1.5 text-[11px] text-primary-foreground">
+        <span className="size-1.5 rounded-full bg-emerald-300 animate-pulse" />
+        4 in queue · ~16 min
+      </div>
+
+      <style>{`@keyframes qfloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }`}</style>
+    </div>
+  );
+}
+
 function FeatureCard({ icon: Icon, title, desc }: { icon: any; title: string; desc: string }) {
   return (
     <div className="rounded-2xl border bg-card p-6 shadow-sm">
