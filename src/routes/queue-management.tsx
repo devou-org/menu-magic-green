@@ -251,24 +251,6 @@ function QueuePage() {
           </div>
         </section>
 
-        {/* Pricing */}
-        <section id="pricing" className="bg-primary text-primary-foreground min-h-screen flex items-center">
-          <div className="max-w-3xl mx-auto px-6 py-20 text-center w-full">
-            <h2 className="text-3xl lg:text-4xl font-bold">Simple pricing, included with Qdine</h2>
-            <p className="mt-3 text-primary-foreground/85">Queue Management is bundled with every Qdine subscription.</p>
-            <div className="mt-10 inline-block rounded-2xl bg-primary-foreground text-foreground p-8 text-left shadow-xl">
-              <div className="text-sm uppercase tracking-widest text-muted-foreground">Qdine Complete</div>
-              <div className="mt-2 text-5xl font-bold">₹199<span className="text-base font-normal text-muted-foreground">/month</span></div>
-              <ul className="mt-6 space-y-2 text-sm">
-                {["Digital menu with branding", "QR-based queue management", "Live ticket tracking", "Host console with one-tap controls"].map((b) => (
-                  <li key={b} className="flex items-center gap-2"><Check className="size-4 text-primary" /> {b}</li>
-                ))}
-              </ul>
-              <Button size="lg" className="mt-6 w-full">Get started</Button>
-            </div>
-          </div>
-        </section>
-
         <footer className="border-t bg-background">
           <div className="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between text-sm text-muted-foreground">
             <Link to="/" className="font-semibold text-foreground">Qdine</Link>
