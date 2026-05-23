@@ -26,7 +26,6 @@ function Nav() {
           <a href="#how" className="hover:text-primary-foreground">How it works</a>
           <a href="#features" className="hover:text-primary-foreground">Features</a>
           <a href="#host" className="hover:text-primary-foreground">Host Control</a>
-          <a href="#pricing" className="hover:text-primary-foreground">Pricing</a>
         </nav>
         <Link to="/" className="text-sm text-primary-foreground/85 hover:text-primary-foreground">← Menus</Link>
       </div>
@@ -248,24 +247,6 @@ function QueuePage() {
               <FeatureCard icon={Bell} title="Smart notifications" desc="Auto-buzz guests when their turn is two away — fewer no-shows, faster turn-times." />
             </div>
           </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section id="pricing" className="bg-primary text-primary-foreground min-h-screen flex items-center">
-          <div className="max-w-3xl mx-auto px-6 py-20 text-center w-full">
-            <h2 className="text-3xl lg:text-4xl font-bold">Simple pricing, included with Qdine</h2>
-            <p className="mt-3 text-primary-foreground/85">Queue Management is bundled with every Qdine subscription.</p>
-            <div className="mt-10 inline-block rounded-2xl bg-primary-foreground text-foreground p-8 text-left shadow-xl">
-              <div className="text-sm uppercase tracking-widest text-muted-foreground">Qdine Complete</div>
-              <div className="mt-2 text-5xl font-bold">₹199<span className="text-base font-normal text-muted-foreground">/month</span></div>
-              <ul className="mt-6 space-y-2 text-sm">
-                {["Digital menu with branding", "QR-based queue management", "Live ticket tracking", "Host console with one-tap controls"].map((b) => (
-                  <li key={b} className="flex items-center gap-2"><Check className="size-4 text-primary" /> {b}</li>
-                ))}
-              </ul>
-              <Button size="lg" className="mt-6 w-full">Get started</Button>
-            </div>
           </div>
         </section>
 
