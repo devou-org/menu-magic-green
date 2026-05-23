@@ -26,7 +26,6 @@ function Nav() {
           <a href="#how" className="hover:text-primary-foreground">How it works</a>
           <a href="#features" className="hover:text-primary-foreground">Features</a>
           <a href="#host" className="hover:text-primary-foreground">Host Control</a>
-          <a href="#pricing" className="hover:text-primary-foreground">Pricing</a>
         </nav>
         <Link to="/" className="text-sm text-primary-foreground/85 hover:text-primary-foreground">← Menus</Link>
       </div>
