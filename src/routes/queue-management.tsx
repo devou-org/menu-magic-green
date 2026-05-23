@@ -151,8 +151,8 @@ function QueuePage() {
       <Nav />
       <main className="pt-24">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-primary text-primary-foreground">
-          <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+        <section className="relative overflow-hidden bg-primary text-primary-foreground min-h-screen flex items-center">
+          <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center w-full">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-foreground/10 text-xs font-medium">
                 <Bell className="size-3.5" /> Qdine Queue Management
@@ -183,7 +183,8 @@ function QueuePage() {
         </section>
 
         {/* How it works */}
-        <section id="how" className="max-w-7xl mx-auto px-6 py-20">
+        <section id="how" className="min-h-screen flex items-center">
+          <div className="max-w-7xl mx-auto px-6 py-20 w-full">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold">Three steps to a frictionless wait</h2>
             <p className="mt-3 text-muted-foreground">From sidewalk to seated, without the clipboard.</p>
@@ -197,11 +198,12 @@ function QueuePage() {
               <FeatureCard key={s.title} {...s} />
             ))}
           </div>
+          </div>
         </section>
 
         {/* Features */}
-        <section id="features" className="bg-muted/40 border-y">
-          <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+        <section id="features" className="bg-muted/40 border-y min-h-screen flex items-center">
+          <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center w-full">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold">Live ticket tracking that customers actually trust</h2>
               <p className="mt-4 text-muted-foreground">
@@ -228,7 +230,8 @@ function QueuePage() {
         </section>
 
         {/* Host control */}
-        <section id="host" className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+        <section id="host" className="min-h-screen flex items-center">
+          <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center w-full">
           <div className="order-2 lg:order-1">
             <HostConsole />
           </div>
@@ -245,11 +248,12 @@ function QueuePage() {
               <FeatureCard icon={Bell} title="Smart notifications" desc="Auto-buzz guests when their turn is two away — fewer no-shows, faster turn-times." />
             </div>
           </div>
+          </div>
         </section>
 
         {/* Pricing */}
-        <section id="pricing" className="bg-primary text-primary-foreground">
-          <div className="max-w-3xl mx-auto px-6 py-20 text-center">
+        <section id="pricing" className="bg-primary text-primary-foreground min-h-screen flex items-center">
+          <div className="max-w-3xl mx-auto px-6 py-20 text-center w-full">
             <h2 className="text-3xl lg:text-4xl font-bold">Simple pricing, included with Qdine</h2>
             <p className="mt-3 text-primary-foreground/85">Queue Management is bundled with every Qdine subscription.</p>
             <div className="mt-10 inline-block rounded-2xl bg-primary-foreground text-foreground p-8 text-left shadow-xl">
