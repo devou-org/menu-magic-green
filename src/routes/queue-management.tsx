@@ -71,10 +71,10 @@ function TicketMockup() {
 
 function QueueIllustration() {
   const people = [
-    { color: "bg-accent", label: "A-17", delay: "0s" },
-    { color: "bg-primary/80", label: "A-16", delay: "0.15s" },
-    { color: "bg-accent/80", label: "A-15", delay: "0.3s" },
-    { color: "bg-primary/60", label: "A-14", delay: "0.45s" },
+    { color: "bg-primary-foreground", label: "A-17", delay: "0s" },
+    { color: "bg-primary-foreground/85", label: "A-16", delay: "0.15s" },
+    { color: "bg-primary-foreground/70", label: "A-15", delay: "0.3s" },
+    { color: "bg-primary-foreground/55", label: "A-14", delay: "0.45s" },
   ];
   return (
     <div className="relative w-full max-w-md mx-auto" aria-hidden="true">
