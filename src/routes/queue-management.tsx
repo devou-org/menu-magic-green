@@ -233,13 +233,9 @@ function QueuePage() {
                 <div className="flex items-center gap-2"><Check className="size-4" /> Works on any phone</div>
               </div>
             </div>
-            <div className="relative flex justify-center items-center min-h-[640px]">
-              {/* Illustration sits behind & around the phone */}
-              <div className="absolute inset-0 flex items-end justify-center pb-4 pointer-events-none">
-                <QueueIllustration />
-              </div>
-              {/* Phone offset to the right so the queue is visible on the left */}
-              <div className="relative z-10 lg:translate-x-24 lg:-translate-y-4">
+            <div className="relative grid grid-cols-[1fr_auto] gap-4 items-center">
+              <QueueIllustration />
+              <div className="scale-90 origin-right">
                 <TicketMockup />
               </div>
             </div>
