@@ -71,10 +71,10 @@ function TicketMockup() {
 
 function QueueIllustration() {
   const people = [
-    { color: "bg-accent", label: "A-17", delay: "0s" },
-    { color: "bg-primary/80", label: "A-16", delay: "0.15s" },
-    { color: "bg-accent/80", label: "A-15", delay: "0.3s" },
-    { color: "bg-primary/60", label: "A-14", delay: "0.45s" },
+    { color: "bg-primary-foreground", label: "A-17", delay: "0s" },
+    { color: "bg-primary-foreground/85", label: "A-16", delay: "0.15s" },
+    { color: "bg-primary-foreground/70", label: "A-15", delay: "0.3s" },
+    { color: "bg-primary-foreground/55", label: "A-14", delay: "0.45s" },
   ];
   return (
     <div className="relative w-full max-w-md mx-auto" aria-hidden="true">
@@ -233,11 +233,9 @@ function QueuePage() {
                 <div className="flex items-center gap-2"><Check className="size-4" /> Works on any phone</div>
               </div>
             </div>
-            <div className="relative flex justify-center items-center">
-              <div className="absolute inset-0 flex items-center justify-center opacity-90">
-                <QueueIllustration />
-              </div>
-              <div className="relative z-10">
+            <div className="relative grid grid-cols-[1fr_auto] gap-4 items-center">
+              <QueueIllustration />
+              <div className="scale-90 origin-right">
                 <TicketMockup />
               </div>
             </div>
