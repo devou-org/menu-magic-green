@@ -90,15 +90,19 @@ export function Pricing() {
         <div className="mt-10 max-w-md mx-auto rounded-3xl bg-card border-2 border-primary p-8 shadow-2xl shadow-primary/20 text-left">
           <div className="text-sm font-semibold text-primary">Pro Plan</div>
           <div className="mt-4 flex items-baseline gap-2">
-            {yearly && (
-              <span className="text-3xl font-bold text-muted-foreground/60 line-through">
-                {region.currency}{region.monthly.includes('.') ? (parseFloat(region.monthly) * 12).toFixed(2) : parseInt(region.monthly) * 12}
-              </span>
-            )}
             <span className="text-6xl font-bold text-foreground">{region.currency}{yearly ? region.yearly : region.monthly}</span>
             <span className="text-muted-foreground">/{yearly ? "year" : "month"}</span>
           </div>
-          {yearly && <div className="mt-1 text-sm text-primary font-semibold">Just {region.currency}{region.monthlyCalculated}/month — billed yearly</div>}
+          {yearly && (
+            <div className="mt-2 flex flex-col gap-1">
+              <span className="text-2xl font-bold text-muted-foreground/60 line-through">
+                {region.currency}{region.monthly.includes('.') ? (parseFloat(region.monthly) * 12).toFixed(2) : parseInt(region.monthly) * 12}
+              </span>
+              <span className="text-sm text-primary font-semibold">
+                Just {region.currency}{region.monthlyCalculated}/month — billed yearly
+              </span>
+            </div>
+          )}
           <ul className="mt-6 space-y-3 text-sm">
             {[
               "Custom-branded digital menu",
