@@ -58,7 +58,7 @@ shadow-primary/30">
             <Clock className="size-3.5" /> Est. wait ~{pos * 4} min
           </div>
           <div className="mt-5 w-full rounded-xl bg-accent text-accent-foreground p-3 text-xs">
-            We'll buzz you when it's your turn â€” keep this tab open.
+            We'll buzz you when it's your turn — keep this tab open.
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@ shadow-black/30">
 bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur px-3 py-1.5 text-[11px] 
 text-primary-foreground">
         <span className="size-1.5 rounded-full bg-emerald-300 animate-pulse" />
-        4 in queue Â· ~16 min
+        4 in queue · ~16 min
       </div>
 
       <style>{`@keyframes qfloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }`}</style>
@@ -167,7 +167,7 @@ function HostConsole() {
         <div>
           <div className="text-sm font-semibold text-card-foreground">Host Console</div>
           <div className="text-xs text-muted-foreground">{rows.filter((r) => r.status === "waiting").length} waiting 
-Â· live</div>
+· live</div>
         </div>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
           <span className="size-2 rounded-full bg-primary animate-pulse" /> Live
@@ -227,7 +227,7 @@ font-medium">
                 End the crowded entrance.<br />Run a calmer waitlist.
               </h1>
               <p className="mt-5 text-lg text-primary-foreground/85 max-w-xl">
-                Diners scan a QR code to join your queue â€” no app download. They watch their position live while 
+                Diners scan a QR code to join your queue — no app download. They watch their position live while 
 your host seats or cancels tickets in a single tap.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -262,12 +262,9 @@ text-primary-foreground hover:bg-primary-foreground/10">
           </div>
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {[
-              { icon: QrCode, title: "1. Scan or tap a link", desc: "Place a QR at the entrance. Customers scan and 
-join the queue in seconds â€” no install, nothing to download." },
-              { icon: Smartphone, title: "2. Track the ticket live", desc: "Each diner gets a digital ticket showing 
-their real-time position and estimated wait time on their phone." },
-              { icon: LayoutGrid, title: "3. Host seats with one tap", desc: "Your team manages the whole list from 
-one console: notify, seat, or cancel tickets instantly." },
+              { icon: QrCode, title: "1. Scan or tap a link", desc: "Place a QR at the entrance. Customers scan and join the queue in seconds — no install, nothing to download." },
+              { icon: Smartphone, title: "2. Track the ticket live", desc: "Each diner gets a digital ticket showing their real-time position and estimated wait time on their phone." },
+              { icon: LayoutGrid, title: "3. Host seats with one tap", desc: "Your team manages the whole list from one console: notify, seat, or cancel tickets instantly." },
             ].map((s) => (
               <FeatureCard key={s.title} {...s} />
             ))}
@@ -282,7 +279,7 @@ one console: notify, seat, or cancel tickets instantly." },
               <h2 className="text-3xl lg:text-4xl font-bold">Live ticket tracking that customers actually trust</h2>
               <p className="mt-4 text-muted-foreground">
                 Guests can wander, shop, or sit in their car. Their position updates in real time and they get a 
-gentle nudge when it's almost their turn â€” so no one feels forgotten and no one crowds your door.
+gentle nudge when it's almost their turn — so no one feels forgotten and no one crowds your door.
               </p>
               <ul className="mt-6 space-y-3 text-sm">
                 {[
@@ -318,13 +315,11 @@ text-xs font-medium">
             <h2 className="mt-4 text-3xl lg:text-4xl font-bold">One screen. Your whole waitlist.</h2>
             <p className="mt-4 text-muted-foreground">
               Hosts manage waiting, seating, and cancellations with a single tap. No more crossed-out names or lost 
-paper lists â€” the source of truth lives on every device behind the counter.
+paper lists — the source of truth lives on every device behind the counter.
             </p>
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
-              <FeatureCard icon={Ticket} title="One-tap actions" desc="Seat or cancel tickets instantly. Changes sync 
-to the customer's phone in real time." />
-              <FeatureCard icon={Bell} title="Smart notifications" desc="Auto-buzz guests when their turn is two away 
-â€” fewer no-shows, faster turn-times." />
+              <FeatureCard icon={Ticket} title="One-tap actions" desc="Seat or cancel tickets instantly. Changes sync to the customer's phone in real time." />
+              <FeatureCard icon={Bell} title="Smart notifications" desc="Auto-buzz guests when their turn is two away — fewer no-shows, faster turn-times." />
             </div>
           </div>
           </div>
@@ -334,7 +329,7 @@ to the customer's phone in real time." />
           <div className="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between text-sm 
 text-muted-foreground">
             <Link href="/" className="font-semibold text-foreground">Qdine</Link>
-            <span>Â© {new Date().getFullYear()} Qdine</span>
+            <span>© {new Date().getFullYear()} Qdine</span>
           </div>
         </footer>
       </main>
