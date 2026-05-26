@@ -14,54 +14,88 @@ const PRICING_REGIONS: Record<string, RegionConfig> = {
   IN: {
     currency: "₹",
     monthly: "199",
-    yearly: "1549",      // 199 × 12 × 0.65 = 1,551 → rounded to 1549
-    savings: "35%",
-    monthlyCalculated: "129.08"  // 1549 / 12
+    yearly: "1669",      // 199 × 12 × 0.70 = 1,673.40 → rounded to 1669
+    savings: "30%",
+    monthlyCalculated: "139.08"
   },
   US: {
     currency: "$",
-    monthly: "6.99",
-    yearly: "54.49",     // 6.99 × 12 × 0.65 = 54.55 → rounded to 54.49
-    savings: "35%",
-    monthlyCalculated: "4.54"  // 54.49 / 12
+    monthly: "9.99",
+    yearly: "83.99",     // 9.99 × 12 × 0.70 = 83.93 → rounded to 83.99
+    savings: "30%",
+    monthlyCalculated: "6.99"
   },
   GB: {
     currency: "£",
-    monthly: "4.99",
-    yearly: "38.99",     // 4.99 × 12 × 0.65 = 38.93 → rounded to 38.99
-    savings: "35%",
-    monthlyCalculated: "3.25"  // 38.99 / 12
-  },
-  SA: {
-    currency: "SAR ",
-    monthly: "11.99",
-    yearly: "93.49",     // 11.99 × 12 × 0.65 = 93.57 → rounded to 93.49
-    savings: "35%",
-    monthlyCalculated: "7.79"  // 93.49 / 12
-  },
-  QA: {
-    currency: "QAR ",
-    monthly: "16.99",
-    yearly: "132.49",    // 16.99 × 12 × 0.65 = 132.57 → rounded to 132.49
-    savings: "35%",
-    monthlyCalculated: "11.04"  // 132.49 / 12
+    monthly: "6.99",
+    yearly: "58.99",     // 6.99 × 12 × 0.70 = 58.75 → rounded to 58.99
+    savings: "30%",
+    monthlyCalculated: "4.91"
   },
   AE: {
     currency: "AED ",
-    monthly: "12.00",
-    yearly: "93.60",     // 12 × 12 × 0.65 = 93.60
-    savings: "35%",
-    monthlyCalculated: "7.80"  // 93.60 / 12
+    monthly: "22.99",
+    yearly: "192.99",    // 22.99 × 12 × 0.70 = 192.91 → rounded to 192.99
+    savings: "30%",
+    monthlyCalculated: "16.08"
+  },
+  KW: {
+    currency: "KWD ",
+    monthly: "1.99",
+    yearly: "16.99",     // 1.99 × 12 × 0.70 = 16.73 → rounded to 16.99
+    savings: "30%",
+    monthlyCalculated: "1.42"
+  },
+  QA: {
+    currency: "QAR ",
+    monthly: "21.99",
+    yearly: "184.99",    // 21.99 × 12 × 0.70 = 184.91 → rounded to 184.99
+    savings: "30%",
+    monthlyCalculated: "15.41"
+  },
+  BH: {
+    currency: "BHD ",
+    monthly: "1.99",
+    yearly: "16.99",     // 1.99 × 12 × 0.70 = 16.73 → rounded to 16.99
+    savings: "30%",
+    monthlyCalculated: "1.42"
+  },
+  SA: {
+    currency: "SAR ",
+    monthly: "17.99",
+    yearly: "151.99",    // 17.99 × 12 × 0.70 = 151.92 → rounded to 151.99
+    savings: "30%",
+    monthlyCalculated: "12.67"
+  },
+  OM: {
+    currency: "OMR ",
+    monthly: "1.99",
+    yearly: "16.99",     // 1.99 × 12 × 0.70 = 16.73 → rounded to 16.99
+    savings: "30%",
+    monthlyCalculated: "1.42"
+  },
+  CA: {
+    currency: "CAD ",
+    monthly: "11.99",
+    yearly: "100.99",    // 11.99 × 12 × 0.70 = 100.91 → rounded to 100.99
+    savings: "30%",
+    monthlyCalculated: "8.41"
+  },
+  DE: {
+    currency: "€",
+    monthly: "6.99",
+    yearly: "58.99",     // 6.99 × 12 × 0.70 = 58.75 → rounded to 58.99
+    savings: "30%",
+    monthlyCalculated: "4.91"
   },
   DEFAULT: {
     currency: "$",
-    monthly: "6.99",
-    yearly: "54.49",
-    savings: "35%",
-    monthlyCalculated: "4.54"
+    monthly: "9.99",
+    yearly: "83.99",
+    savings: "30%",
+    monthlyCalculated: "6.99"
   },
 };
-
 export function Pricing() {
   const [yearly, setYearly] = useState(false);
   const [region, setRegion] = useState<RegionConfig>(PRICING_REGIONS.DEFAULT);
